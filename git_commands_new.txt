@@ -1,0 +1,496 @@
+https://git-scm.com/doc
+
+
+$ git --version
+
+$ git config --global user.name 'aiRobott'
+
+$ git config --global user.email 'vajjakishor@gmail.com'
+
+   $ git config --list
+
+   $ git help config
+
+   $ git config --help
+
+
+
+$ pwd
+
+$ ls
+
+$ cd git-practice/
+
+$ ls -la
+
+$ clear  # clears screen
+
+
+create a folder on desk top (Ex: git-practice)
+
+
+
+$ git add -A    # to add all the files in the working directory
+
+
+$ git reset calc.py  # to send back file
+
+
+$ git reset # it send all the files back
+
+$ git add -A
+$ git status
+
+$ git commit -m "Initial Commit"
+
+Output :[master (root-commit) bcad3a9] Initial commit
+ 2 files changed, 4 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 calc.py
+
+$ git status
+output : On branch master
+nothing to commit, working tree clean
+
+$ git log
+output : commit bcad3a983b98e0d726df16264d3eae0d6a497c89 (HEAD -> master)
+Author: aiRobott <vajjakishor@gmail.com>
+Date:   Sat Dec 8 21:23:06 2018 +0530
+
+    Initial commit
+
+
+
+
+
+Cloning a remote repo:
+
+$ ls
+
+$ cd myGit # directory name
+$ ls -la
+
+$ git clone ../remote_repo.git .  # . is the working directory
+$ ls -la
+
+$ git clone <url> <where to clone>
+
+$ git clone ../remote_repo.git .
+
+
+
+
+
+Viewing information about remote repository:
+
+$ git remote -v
+
+$ git branch -a
+
+
+
+Pushing changes:
+Commit changes like we did previously:
+
+$ git diff
+
+$ git status
+
+$ git add -A
+
+$ git status
+
+$ git commit -m "Multifly function"
+
+
+Then PUSH:
+
+$ git pull origin master
+$ git push origin master
+
+
+Common Workflow:
+Create a Branch for desired feature:
+$ git branch calc-divide
+$ git branch
+$ git checkout calc-divide
+$ git branch
+edit the file calc.py
+$ git status
+$ git add -A
+$ git commit -m "Divide function"
+
+
+After commit PUSH Branch to remote
+$ git push -u origin calc-divide
+
+$ git branch -a
+
+Merge a Branch:
+$ git checkout master
+$ git pull origin master
+$ git branch --merged
+$ git merge calc-divide
+$ git push origin master
+
+
+Deleting a branch:
+$ git branch --merged
+$ git branch -d calc-divide
+$ git branch -a
+$ git push origin --delete calc-divide
+$ git branch -a
+
+
+
+
+
+
+
+
+
+
+
+=============================================================
+
+
+
+
+1). $ touch index.html
+
+2). $ touch app.js
+
+3). $ git init
+
+4). $ git config --global user.name 'aiRobott'
+
+5). $ git config --global user.email 'vajjakishor@gmail.com'
+
+   $ git config --list
+
+   $ git help config
+
+   $ git config --help
+
+
+
+
+
+   
+
+6). $ git add index.html
+
+7). $ git status
+
+8). $ git rm --cached index.html
+
+9). $ git status
+
+10). $ git add *.html
+
+11). $ git status
+
+12). $ git rm --cached index.html
+
+13). $ git add .
+
+14). $ git status
+
+15). $ git commit
+
+16). it opens vi editor
+   in keyboard press 'i'
+ to get put from vi editor >  predd Esc key and Shift + : wq
+
+if any editing done in file (Ex: app.js) :
+17). $ git add .
+18). $ git commit -m 'changed app.js'
+
+
+19). $ clear
+
+20). $ touch .gitignore
+
+21). $ touch log.txt
+
+22). $ git add .
+
+23). $ git status
+
+24). $ git branch login
+
+25). $ git status
+
+26). $ git commit - m 'another change'
+
+27). $ git checkout login
+
+28). $ touch login.html
+
+29). $ git add .
+
+30). $ git commit -m 'login form'
+
+31). $ git checkout master
+
+32). $ git merge login
+
+opens vi editor
+
+
+
+in github.com
+
+create new repository
+
+Repository Name :
+Description :
+public/private
+Create repository
+
+33). $ git remote
+
+copy from your github (below) and paste in your terminal 
+34). $ git remote add origin https://github.com/aiRobott/my-app.git
+
+35). $ git remote
+
+copy from your github (below) and paste in your terminal
+36). $ git push -u origin master
+
+now small window opens and it asks your username and password
+
+37). $ touch README.md
+
+38). $ git add .
+
+39). $ git commit -m 'Added readme file'
+
+40). $ git push
+
+
+to clone yours , before create a folder on desktop and open with terminal
+41). $ git clone https://github.com/aiRobott/my-app1.git
+
+42). $ git pull
+
+
+
+
+====================================
+
+how to add files to repository
+
+$ git add Helloworld.txt
+$ git commit -m "Uploads file HelloWorld"
+$ git remote set-url origin https://github.com/aiRobott/my-app
+$ git push origin master
+
+
+
+how to remove a file
+$ git rm --cached Helloworld.txt
+$ git commit -m "Deletes Helloworld"
+$ git push origin master
+
+
+how to download a file
+$ git checkout origin/master -- test.txt
+
+
+==============================================================================================
+
+
+
+
+               First experiment - How to upload files from PC to GitHub account ?
+               ------------------------------------------------------------------  
+
+       Step 1: right click on the folder(which you want to upload) -> click Git Bash Here
+       ------ 
+
+         $ pwd
+       /h/Artificial Intelligence-Books/AI Books Writing/Py3 - Data Structures
+
+       Step 2: $ git init
+       ------  
+               Initialized empty Git repository in H:/Artificial Intelligence-Books/AI Books Writing/Py3                Data Structures/.git/Kwins@Kwins-World MINGW32 /h/Artificial../.../Py3- Data Structures               (master)
+
+       Step 3: $ git status
+       ------
+		On branch master
+		No commits yet
+
+	Untracked files:
+  	(use "git add <file>..." to include in what will be committed)
+
+        	0. Introduction.doc
+        	1. Arrays.doc
+       	 	10. Nodes.doc
+        	11. Python - Linked Lists.doc
+        	12. Python - Stack.doc
+        	13. Python -Queue.doc
+        	14. Python -Deque.doc
+        	15. Python - Advanced Linked List.doc
+        	16. Hash Table.doc
+        	17. Python - Binary Tree.doc
+        	18. Python - Search Tree.doc
+        	19. Python - Heaps.doc
+        	2. Lists.doc
+        	20. Python Graphs.doc
+        	3. Tuples.doc
+        	4. Dictionary.doc
+        	5. 2D Array.doc
+        	6. Matrix.doc
+        	7. Maps.doc
+        	9. Sets.doc
+        	Blank Page (7) - Copy.doc
+        	~$. Python - Linked Lists.doc
+        	~WRL0001.tmp
+
+	nothing added to commit but untracked files present (use "git add" to track)
+
+
+
+	Step 4: $ git add -A
+        ------
+
+
+	Step 5: $ git status
+     	------
+		On branch master
+		No commits yet
+
+		Changes to be committed:
+	  	(use "git rm --cached <file>..." to unstage)
+
+        	new file:   0. Introduction.doc
+        	new file:   1. Arrays.doc
+        	new file:   10. Nodes.doc
+        	new file:   11. Python - Linked Lists.doc
+        	new file:   12. Python - Stack.doc
+        	new file:   13. Python -Queue.doc
+        	new file:   14. Python -Deque.doc
+       	 	new file:   15. Python - Advanced Linked List.doc
+        	new file:   16. Hash Table.doc
+        	new file:   17. Python - Binary Tree.doc
+        	new file:   18. Python - Search Tree.doc
+        	new file:   19. Python - Heaps.doc
+        	new file:   2. Lists.doc
+        	new file:   20. Python Graphs.doc
+        	new file:   3. Tuples.doc
+        	new file:   4. Dictionary.doc
+        	new file:   5. 2D Array.doc
+        	new file:   6. Matrix.doc
+        	new file:   7. Maps.doc
+        	new file:   9. Sets.doc
+        	new file:   Blank Page (7) - Copy.doc
+        	new file:   ~$. Python - Linked Lists.doc
+        	new file:   ~WRL0001.tmp
+
+
+
+	Step 6: $ git commit -m "Uploading files"
+	------
+		[master (root-commit) 9091374] Uploading files
+		23 files changed, 0 insertions(+), 0 deletions(-)
+ 		create mode 100644 0. Introduction.doc
+ 		create mode 100644 1. Arrays.doc
+ 		create mode 100644 10. Nodes.doc
+ 		create mode 100644 11. Python - Linked Lists.doc
+ 		create mode 100644 12. Python - Stack.doc
+ 		create mode 100644 13. Python -Queue.doc
+ 		create mode 100644 14. Python -Deque.doc
+ 		create mode 100644 15. Python - Advanced Linked List.doc
+ 		create mode 100644 16. Hash Table.doc
+ 		create mode 100644 17. Python - Binary Tree.doc
+ 		create mode 100644 18. Python - Search Tree.doc
+ 		create mode 100644 19. Python - Heaps.doc
+ 		create mode 100644 2. Lists.doc
+ 		create mode 100644 20. Python Graphs.doc
+ 		create mode 100644 3. Tuples.doc
+ 		create mode 100644 4. Dictionary.doc
+ 		create mode 100644 5. 2D Array.doc
+ 		create mode 100644 6. Matrix.doc
+ 		create mode 100644 7. Maps.doc
+ 		create mode 100644 9. Sets.doc
+ 		create mode 100644 Blank Page (7) - Copy.doc
+ 		create mode 100644 ~$. Python - Linked Lists.doc
+ 		create mode 100644 ~WRL0001.tmp
+
+
+	Step 7: $ git status
+	------
+		On branch master
+		nothing to commit, working tree clean
+
+
+	Step 8: $ git log
+	------
+		commit 909137443a1e379153bd93a77cfe0f1a5c9d0a4a (HEAD -> master)
+		Author: aiRobott <vajjakishor@gmail.com>
+		Date:   Sat Dec 8 23:07:48 2018 +0530
+
+		   Uploading files
+
+
+	Step 9:  $ git remote
+	------
+
+	Step 10: $ git remote add origin https://github.com/aiRobott/py3-DataStructures
+	-------
+
+	Step 11: $ git remote
+	-------	   origin
+
+	Step 12: $ git push -u origin master
+	-------
+		  Enumerating objects: 25, done.
+		  Counting objects: 100% (25/25), done.
+		  Delta compression using up to 2 threads
+		  Compressing objects: 100% (25/25), done.
+		  Writing objects: 100% (25/25), 275.51 KiB | 2.53 MiB/s, done.
+		  Total 25 (delta 21), reused 0 (delta 0)
+		  remote: Resolving deltas: 100% (21/21), done.
+		  remote:
+		  remote: Create a pull request for 'master' on GitHub by visiting:
+		  remote:      https://github.com/aiRobott/py3-DataStructures/pull/new/master
+		  remote:
+		  To https://github.com/aiRobott/py3-DataStructures
+		  * [new branch]      master -> master
+		  Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+
+		
+		 To Add README file
+		 ------------------
+
+	Step 13 : $ touch README.md
+	-------
+
+	Step 14 : $ git add .
+	-------
+
+	Step 15 : $ git commit -m "Adding README file"
+	-------
+		  [master d880375] Adding README file
+		  1 file changed, 0 insertions(+), 0 deletions(-)
+		  create mode 100644 README.md
+
+	Step 16 : $ git push
+	-------
+		  Enumerating objects: 4, done.
+		  Counting objects: 100% (4/4), done.
+		  Delta compression using up to 2 threads
+		  Compressing objects: 100% (2/2), done.
+		  Writing objects: 100% (3/3), 278 bytes | 278.00 KiB/s, done.
+		  Total 3 (delta 1), reused 0 (delta 0)
+		  remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+		  To https://github.com/aiRobott/py3-DataStructures
+		  9091374..d880375  master -> master
+
+
+			Verify at your github account repository.
+=======================================================================================================
+
+
